@@ -32,10 +32,10 @@
 
         function loadCart() {
             cart.map((val, index) => {
-                console.log(val);
                 let div = document.createElement("div");
+                div.className="col-4"
                 div.innerHTML = `
-          
+                
                 <div class="card" style="width: 18rem">
             <img class="card-img-top" src="${val.img}" alt="Card image cap" height="300" width="250" />
             <div class="card-body">
@@ -60,10 +60,14 @@
 
         loadCart();
 
-        function removeToCart()
+        function removeToCart(index)
         {
-            
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            location.reload();
         }
+       let total = cart.price;
+       console.log(val.price); 
     </script>
 </body>
 
