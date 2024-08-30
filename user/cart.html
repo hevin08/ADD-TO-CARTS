@@ -42,7 +42,7 @@
               <h5 class="card-title">${val.productName}</h5>
               <p class="card-text">
                 Price :-
-              ${val.price}
+              ₹${val.price}
               </p>
                <p class="card-text">
                 Info :-
@@ -66,8 +66,12 @@
             localStorage.setItem("cart", JSON.stringify(cart));
             location.reload();
         }
-       let total = cart.price;
-       console.log(val.price); 
+     function calulate()
+     {
+        cart.map((val, index) => {
+            
+        });
+     }
     </script>
 </body>
 

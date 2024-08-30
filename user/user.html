@@ -64,7 +64,7 @@
               <h5 class="card-title">${val.productName}</h5>
               <p class="card-text">
                 Price :-
-              ${val.price}
+              ₹${val.price}
               </p>
                <p class="card-text">
                 Info :-
@@ -90,9 +90,11 @@
 
             let result = filterproducts[index];
 
-            console.log(result);
-
+            if (products.find((el) => el.productName == cart.productNameyu)) {
+            alert("Product Already added in Cart");
+        } else {
             cart.push(result);
+        }
 
             localStorage.setItem("cart",JSON.stringify(cart));
         };
